@@ -1,0 +1,22 @@
+<div class="classes-items">
+    <div class="card my-3" data-ng-repeat="class in classes | filter: search track by class.className">
+        <div class="row no-gutters">
+            <div class="col-md-1">
+                <div class="className"> {{class.sectionName}}</div>
+            </div>
+            <div class="col-md-11">
+                <div class="card-body">
+                    <h5 class="card-title">{{class.className}}</h5>
+                    <p class="card-text">School: {{ class.schoolName}}</p>
+                    <p class="card-text">Grade: {{class.grade}}</p>
+                </div>
+                <div class="viewEditDelete">
+                    <a href="#" data-toggle="modal" data-target="#viewModal" data-ng-click="viewClass(class)"><i class="view fa fa-eye"></i></a>
+                    <a href="#" data-ng-click="editClass(class)"><i class="edit fa fa-edit"></i></a>
+                    <a href="#" data-ng-click="deleteClass(class)"><i class="delete fa fa-trash"></i></a>
+                </div>
+            </div>
+        </div> <!-- ./no-gutters --> 
+    </div> <!-- ./card -->
+    <div class="no-items" ng-show="classes.length == 0"> There no Item To Show</div>
+</div>

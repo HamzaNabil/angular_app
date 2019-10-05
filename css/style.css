@@ -1,0 +1,384 @@
+/* General Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../images/body-bg.png');
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 , h2 , h3 , p {
+    margin: 0
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(162, 162, 162, 0.05);
+}
+
+
+/* Header Styles */
+.header {
+    background-image: url('../images/bg.png');
+    background-size: cover; 
+    background-color: #630b59;
+    padding: 1px 0; /* for resolve margin collapse */
+}
+
+.header .top-layer {
+
+}
+
+.header .top-layer-lists {
+    margin: 15px 0
+}
+
+.header .top-layer-lists li,
+.header .right-lists li,
+.header .bottom-layer-lists li {
+    display: inline-block;
+}
+
+.header .top-layer-lists li a, 
+.header .right-lists li a{
+    color: #fff;
+    display: block;
+    padding: 5px 10px;
+    font-size: 14px
+}
+
+.header .top-layer-lists li:last-child a {
+    background: #ee5c7e;
+    border-radius: 15px;
+}
+
+.header .top-layer-lists li:nth-child(3) a {
+    background: #7d6b71;
+    border-radius: 15px;
+}
+
+.header .right-lists {
+   text-align: right;
+   margin: 10px 0
+}
+
+.header .right-lists li:last-child {
+    width: 20%
+}
+
+.header .right-lists li:last-child img {
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+/* Middle Layer Of Header */
+.header .middle-layer {
+    margin: 30px 0;
+    color: #fff;
+}
+
+.header .middle-layer .desc {
+    margin: 10px 0;
+    font-size: 14px
+}
+
+.header .middle-layer .box-overlay {
+    position: relative;
+    padding: 5px 0
+}
+
+.header .middle-layer .box-overlay span {
+    position: relative;
+    z-index: 2;
+}
+
+.box-overlay:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(125, 107, 113 , 0.5);
+    top: 0;
+    left: -53%;
+    z-index: 1;
+    border-top-right-radius: 25px ;
+    border-bottom-right-radius: 25px;
+}
+.box-overlay:first-child:after {
+    left: -60%;
+}
+
+/* bottom-layer */
+.header .bottom-layer {
+
+}
+
+.header .bottom-layer-lists {
+    margin-bottom: 10px;
+}
+
+.header .bottom-layer-lists li a {
+    color: #fff;
+    padding: 0 10px
+}
+
+.header .bottom-layer-lists li a i {
+    color: #edda5a
+}
+
+.header .bottom-layer-lists li:not(:last-child) a {
+    border-right: 1px solid #fff;
+}
+
+.header .bottom-layer-lists li:first-child a {
+    padding-left: 0
+}
+
+/* Main */
+main {
+    padding: 30px 0;
+    /* height:100vh; */
+    min-height: calc(100vh - 300px); /*300px = header height + footer height = 268 + 32 */ 
+}
+
+:focus {
+    outline: 0 !important
+}
+
+main .setting .searchBar input {
+    border: 0 !important;
+    background: transparent;
+    border-bottom: 1px solid #7d6b71 !important; 
+    box-shadow: none!important;
+    border-radius:0 
+}
+
+main .setting .searchBar .input-group-text {
+    border: 0 !important;
+    border-bottom: 1px solid #7d6b71 !important; 
+    border-radius:0 
+}
+
+main .setting .searchBar .input-group-text i {
+    color: #630b59;
+    font-size: 20px
+}
+
+main .setting .menu-bar {
+    text-align: right;
+}
+
+main .setting .menu-bar .dropdown-toggle::after {
+    display: none
+}
+
+main .setting .menu-bar .dropdown-toggle i {
+    color: #7d6b71;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+/* classesItems */
+main .card {
+    border-radius: 20px;
+    transition: box-shadow 0.2s ease-in-out;
+    position: relative;
+}
+
+main .card:hover {
+    box-shadow: 0 3px 5px #dadada;
+}
+
+main .classes-items .className {
+    font-weight: bold;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding-top: 19px;
+    font-size: 35px;
+    color: #ffffff;
+    background: #919191;
+    border-radius: 20px 0 0 20px;
+    transition: background 0.2s ease-in-out
+}
+
+main .classes-items .no-items{
+    background: #ee5c7e;
+    color: #fff;
+    padding: 10px;
+    margin: 20px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+main .classes-items .viewEditDelete {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+main .classes-items .viewEditDelete i{
+    margin-left: 5px; 
+}
+
+main .classes-items .viewEditDelete a:first-of-type {
+    color: #630b59
+}
+
+main .classes-items .viewEditDelete a:nth-of-type(2) {
+    color: #edda5a
+}
+
+main .classes-items .viewEditDelete a:last-of-type {
+    color: #ee5c7e
+}
+
+main .card:hover  .className {
+    background: #630b59
+}
+
+
+/* Modals */
+.modal-dialog {
+    max-width: 1200px;
+}
+
+#deleteRecord .modal-dialog, 
+#viewModal .modal-dialog,
+#saveModal .modal-dialog{
+    max-width: 427px;
+    transform: translate(0,50px);
+}
+
+.modal-header {
+    background: #8b5aaf;
+    color: #fff;
+    border-radius: 0
+}
+
+.modal-header .close {
+    color: #fff;
+} 
+
+.modal-content {
+    border-radius: 0;
+    min-height: 500px;
+}
+
+.modal-footer button.notdisabled {
+    opacity: 1;
+    cursor: auto;
+}
+
+.modal-footer button.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#deleteRecord .modal-content ,
+#viewModal .modal-content ,
+#saveModal .modal-content{
+    min-height: auto;
+}
+
+.modal.fade .modal-dialog {
+    transform: translate(0,130px);
+}
+
+.modal-body .content {
+    max-width: 450px;
+    margin: auto 
+}
+
+.modal .school-section {
+    border: 1px solid #ccc;
+    padding: 30px 0 3px 0;
+    margin: 10px 0
+}
+
+.modal .school-section form{
+    width: 90%;
+    margin: auto
+}
+
+.modal .school-section .table .delete-record {
+    color: red;
+    font-size: 22px;
+}
+
+.modal .school-section .add-record {
+    color: #8b5aaf;
+    display: block;
+    margin: 5px 0
+}
+
+.modal .school-section .add-record i {
+    color: #fff;
+    background: #8b5aaf;
+    border-radius: 50%;
+    padding: 5px
+}
+
+button[disabled=disabled] {
+    opacity: 0.4;
+    cursor: not-allowed !important;
+}
+
+.edit[disabled=disabled] {
+    opacity: 0.4;
+    cursor: not-allowed !important;
+}
+
+.activeItem {
+    border: 2px solid #080;
+    padding: 5px
+}
+/* Footer */
+footer {
+    background: #630b59;
+    padding: 2px 0;
+    text-align: center;
+}
+
+/* icons_ */
+.icons_ {
+    position: fixed;
+    right: 80px;
+    bottom: 80px;
+}
+
+.icons_ a {
+    font-size: 25px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: #ee5c7e;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 5px;  
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 3px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ee5c7e; 
+}
+

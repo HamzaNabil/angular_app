@@ -1,0 +1,26 @@
+[ 
+	{ 
+	   "sectionName":"A",
+	   "className":"Old Class Name 1",
+	   "schoolName":"Cairo English School",
+	   "grade":1
+	},
+	{ 
+	   "sectionName":"B",
+	   "className":"Old Class Name 2",
+	   "schoolName":"British International School In Cairo",
+	   "grade":2
+	},
+	{ 
+	   "sectionName":"C",
+	   "className":"Old Class Name 3",
+	   "schoolName":"Saint George's College",
+	   "grade":3
+	},
+	{ 
+	   "sectionName":"D",
+	   "className":"Old Class Name 4",
+	   "schoolName":"Cairo English School",
+	   "grade":4
+	}
+ ]

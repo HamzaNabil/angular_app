@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <!-- Custom Style  -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Media Query -->
+        <link rel="stylesheet" href="css/media.css">
+
+        <!-- Angular Js -->
+        <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/filters.js"></script>
+
+        <title>AngularJS app</title>
+    </head>
+    <body data-ng-app="myApp" data-ng-controller="ClassController" data-ng-cloak>
+        
+        <!-- Header -->
+        <header data-ng-include="'templates/header.html'"></header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="container">
+                <div class="setting">
+                    <div class="row">
+                        <div class="col-md-3 col-12">
+                            <div data-ng-show="classes.length" class="searchBar input-group">
+                                <input data-ng-model="search" class="form-control py-2 border-right-0 border" type="text" placeholder="Search My Classes">
+                                <div class="input-group-append">
+                                    <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
+                                </div>
+                            </div> <!-- ./searchBar -->
+                            <div data-ng-hide="classes.length">No Items to search</div>
+                        </div> <!-- ./col -->
+                        <div class="col-md-9 col-12">
+                            <div class="menu-bar">
+                                <div class="btn-group">
+                                    <a class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-ellipsis-h"></i>
+                                    </a>
+                                    
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addModal">Add Class</a>
+                                        <a class="dropdown-item edit" href="#" data-toggle="modal" data-target="#editModal" data-ng-class="classes.length == 0 ? 'disabled' : ''">Edit Class</a>
+                                    </div> <!-- ./dropdown-menu -->
+                                </div> <!-- ./btn-group -->
+                            </div> <!-- ./menu-bar -->
+                        </div> <!-- ./col -->
+                    </div> <!-- ./row -->
+                </div> <!-- ./setting -->
+
+                <!-- Classes Items -->
+                <div data-ng-include="'templates/classItem.html'"></div>
+
+                <!-- Modal For Add Class -->
+                <div data-ng-include="'templates/addRecord.html'"></div>
+                <!-- ./modal -->
+
+                <!-- Modal For Edit Class -->
+                <div data-ng-include="'templates/editRecord.html'"></div>
+
+                <!-- Modal For View Class -->
+                <div data-ng-include="'templates/viewRecord.html'"></div>
+
+                <!-- Modal For Delete Class -->
+                <div data-ng-include="'templates/deleteRecord.html'"></div>
+
+                <!-- Modal For Confirm Changes -->
+                <div data-ng-include="'templates/confirmChanges.html'"></div>
+
+            </div> <!-- ./container -->
+        </main> 
+        
+        <!-- Footer -->
+        <footer data-ng-include="'templates/footer.html'"></footer>
+
+        <!-- Icons -->
+        <div class="icons_">
+            <a href="#" data-toggle="modal" data-target="#addModal"> <i class="fa fa-plus"></i></a>
+        </div>
+
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
