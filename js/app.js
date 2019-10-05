@@ -36,7 +36,6 @@ myApp.controller("ClassController" , ["$scope" , "$http", function($scope, $http
     // edit class 
     $scope.active = {sectionName: '', className: '', schoolName: '' , grade: ''}
     $scope.editClass = function(item) {
-        console.log("item",item)
         $scope.active = item;
         $scope.schoolList = item.schoolName;
         $("#editModal").modal('show')

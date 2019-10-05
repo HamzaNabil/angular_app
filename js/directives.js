@@ -23,9 +23,6 @@ myApp.directive("allowNumbersOnly", function() {
             return false;
           }
         });
-
-
-
       }
     }
 });
