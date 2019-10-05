@@ -83,7 +83,13 @@ myApp.controller("ClassController" , ["$scope" , "$http", function($scope, $http
         }
     }
 
-
+    // cancelSave
+    $scope.cancelSave = function() {
+        $scope.newClassRecord = {};
+        $("#saveModal").modal('hide')
+        $("#addModal").modal('hide')
+        $("#editModal").modal('hide')
+    }
     
   
 }]);
