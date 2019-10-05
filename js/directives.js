@@ -18,7 +18,7 @@ myApp.directive("allowNumbersOnly", function() {
         element.bind("keydown", function(event) {
           if (event.keyCode == 8) {
             return false;
-          } else if ( !(event.keyCode > 47 && event.keyCode < 58) || event.shiftKey ) {
+          } else if ( !(event.keyCode > 96 && event.keyCode < 106) ) {
             event.preventDefault();
             return false;
           }
