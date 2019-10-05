@@ -29,8 +29,8 @@
                             </thead>
                             <tbody>
                                 <tr class="row" ng-repeat="class in classes | schoolName:schoolList track by class.className " ng-class="active.sectionName === class.sectionName ? 'activeItem' : ''">
-                                    <td class="col-md-2 col-3"><input class="form-control" name="sectionname" type="text" limit-to="3" ng-model="class.sectionName"></td>
-                                    <td class="col-md-6 col-5"> <input class="form-control" name="classname" type="text" limit-to="40" ng-model="class.className" ></td>
+                                    <td class="col-md-2 col-3"><input class="form-control" name="sectionname" type="text" limit-to="3" ng-model="class.sectionName"><small style="color:#999">less than 3 characters</small></td>
+                                    <td class="col-md-6 col-5"> <input class="form-control" name="classname" type="text" limit-to="40" ng-model="class.className" ><small style="color:#999">less than 40 characters</small></td>
                                     <td class="row col-md-4 col-4"> 
                                         <!-- <select name="" id="" class="col-md-10 col-6 form-control">
                                             <option ng-repeat="gradeItem in grades" value="{{gradeItem}}" ng-init="class.grade=gradeItem">{{gradeItem}}</option> {{gradeItem}}  
@@ -42,9 +42,11 @@
                                 <tr class="row">
                                     <td class="col-md-2 col-3">
                                         <input class="form-control" name="sectionname" type="text" limit-to="3" data-ng-model="newClassRecord.sectionName" data-ng-required="true">
+                                        <small style="color:#999">less than 3 characters</small>
                                     </td>
                                     <td class="col-md-6 col-5">
                                         <input class="form-control" name="classname" type="text" limit-to="40" data-ng-model="newClassRecord.className"  data-ng-required="true">
+                                        <small style="color:#999">less than 40 characters</small>
                                     </td>
                                     <td class="row col-md-4 col-4">
                                         <input class="col-md-10 col-6 form-control" name="grade" type="text" allow-numbers-only  data-ng-model="newClassRecord.grade" data-ng-required="true" >

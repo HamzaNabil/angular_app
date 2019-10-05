@@ -36,9 +36,11 @@
                                 <tr class="row">
                                     <td class="col-md-2 col-3">
                                         <input class="form-control" name="sectionname" type="text" limit-to="3" data-ng-model="newClassRecord.sectionName" data-ng-required="true">
+                                        <small style="color:#999">less than 3 characters</small>
                                     </td>
                                     <td class="col-md-6 col-5">
                                         <input class="form-control" type="text" name="classname" limit-to="40" data-ng-model="newClassRecord.className" data-ng-required="true">
+                                        <small style="color:#999">less than 40 characters</small>
                                     </td>
                                     <td class="row col-md-4 col-4">
                                         <input class="col-md-10 form-control col-6" name="grade"  type="text" allow-numbers-only data-ng-model="newClassRecord.grade" data-ng-required="true">
