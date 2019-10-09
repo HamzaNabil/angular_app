@@ -27,7 +27,7 @@ myApp.controller("ClassController" , ["$scope" , "$http", function($scope, $http
     // Add Class
     $scope.newClassRecord = {};
     $scope.addClass = function() {
-        $scope.classes = [... $scope.classes, $scope.newClassRecord];
+        $scope.classes.push($scope.newClassRecord);
         $scope.newClassRecord = {};
         $("#addModal").modal('hide')
         $("#editModal").modal('hide');

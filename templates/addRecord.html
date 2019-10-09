@@ -21,30 +21,30 @@
                     <form name="classForm" novalidate ng-submit="addClass()"> 
                         <table class="table table-striped table-borderless">
                             <thead>
-                                <tr class="row">
-                                    <th class="col-md-2 col-3" scope="col">Section</th>
-                                    <th class="col-md-6 col-5" scope="col">Class Name</th>
-                                    <th class="col-md-4 col-4" scope="col">Grade</th>
+                                <tr class="" style="width:100%">
+                                    <th class="col-md-2 col-3" style="width: 20%;" >Section</th>
+                                    <th class="col-md-6 col-5"  style="width: 50%;"  >Class Name</th>
+                                    <th class="col-md-4 col-4" style="width: 30%;"  >Grade</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="row" data-ng-repeat="class in classes | schoolName:schoolList track by class.className" ng-init="newClassRecord.schoolName=schoolList" >
-                                    <td class="col-md-2 col-3"> {{class.sectionName}} </td>
-                                    <td class="col-md-6 col-5"> {{class.className}} </td>
-                                    <td class="row col-md-4 col-4"> {{class.grade}} <a class="delete-record col-md-2 col-6" href="#" data-ng-click="deleteClass(class)"> <i class="fa fa-trash"></i> </a></td>
+                                <tr class="" data-ng-repeat="class in classes | schoolName:schoolList track by class.className" ng-init="newClassRecord.schoolName=schoolList" >
+                                    <td class="col-md-2 col-3" style="width: 20%;"> {{class.sectionName}} </td>
+                                    <td class="col-md-6 col-5" style="width: 50%;"> {{class.className}} </td>
+                                    <td class=" col-md-4 col-4" style="width: 30%;" > {{class.grade}} <a class="delete-record col-md-2 col-6" href="#" data-ng-click="deleteClass(class)"> <i class="fa fa-trash"></i> </a></td>
                                 </tr>
-                                <tr class="row">
-                                    <td class="col-md-2 col-3">
+                                <tr class="">
+                                    <td class="col-md-2 col-3" style="width: 20%;" >
                                         <input class="form-control" name="sectionname" type="text" limit-to="3" data-ng-model="newClassRecord.sectionName" data-ng-required="true">
                                         <small style="color:#999">less than 3 characters</small>
                                     </td>
-                                    <td class="col-md-6 col-5">
+                                    <td class="col-md-6 col-5" style="width: 50%;" >
                                         <input class="form-control" type="text" name="classname" limit-to="40" data-ng-model="newClassRecord.className" data-ng-required="true">
                                         <small style="color:#999">less than 40 characters</small>
                                     </td>
-                                    <td class="row col-md-4 col-4">
-                                        <input class="col-md-10 form-control col-6" name="grade"  type="text" allow-numbers-only data-ng-model="newClassRecord.grade" data-ng-required="true">
-                                        <a class="delete-record col-md-2 col-6" href="#" data-ng-click="resetValues(newClassRecord)" > <i class="fa fa-trash"></i> </a>
+                                    <td class=" col-md-4 col-4" style="width: 30%;">
+                                        <input class="col-md-10 form-control col-6"  style="width: 70%; float: left;" name="grade"  type="text" allow-numbers-only data-ng-model="newClassRecord.grade" data-ng-required="true">
+                                        <a class="delete-record col-md-2 col-6"  style="width: 20%;" href="#" data-ng-click="resetValues(newClassRecord)" > <i class="fa fa-trash"></i> </a>
                                     </td>
                                 </tr>
                             </tbody>
