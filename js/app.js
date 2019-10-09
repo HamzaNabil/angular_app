@@ -15,15 +15,7 @@ myApp.controller("ClassController" , ["$scope" , "$http", function($scope, $http
     $http.get('data/data.json').then(function(res) {
         $scope.classes = res.data;
     })
-
-    // All Classes
-    // $scope.classes = [
-    //     {sectionName: 'A', className: 'Old Class Name 1', schoolName: $scope.schools[0].name , grade: 1},
-    //     {sectionName: 'B', className: 'Old Class Name 2', schoolName: $scope.schools[1].name , grade: 2},
-    //     {sectionName: 'C', className: 'Old Class Name 3', schoolName: $scope.schools[2].name , grade: 3},
-    //     {sectionName: 'D', className: 'Old Class Name 4', schoolName: $scope.schools[0].name , grade: 4},
-    // ];
-
+    
     // Add Class
     $scope.newClassRecord = {};
     $scope.addClass = function() {
